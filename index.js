@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const taskRoutes = require('./routes/TaskRoutes')
-const { swaggerDocs : V1SwaggerDocs } = require('./swagger')
+
 
 
 // Conectar con la DB
@@ -32,7 +32,6 @@ app.use(express.json())
 
 app.listen(PORT, () => {
   console.log(`Server started at ${PORT}`)
-  V1SwaggerDocs(app, PORT)
 })
 
 // Conectarnos con las rutas
