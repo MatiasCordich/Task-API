@@ -36,6 +36,12 @@ app.listen(PORT, () => {
 
 // Conectarnos con las rutas
 
+app.get('/', (req, res) => {
+  res.send({
+    mag: "Api funcionando"
+  })
+})
+
 app.use('/api/v1/tasks', taskRoutes)
 
 
